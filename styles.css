@@ -1,0 +1,409 @@
+@font-face {
+    font-family: "Comfortaa";
+    src: url("/fonts/Comfortaa-Medium.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+
+
+body {
+    /* свойство высоты можно будет позже убрать */
+    height: 200vw;
+    box-sizing: border-box;
+    font-family: "Comfortaa";
+    font-size: 15px;
+    color: #fff;
+}
+
+div a img {
+    grid-row: 1 / 3;
+    align-self: center;
+}
+
+.title {
+    padding-top: 10px;
+    font-size: 30px;
+}
+
+
+
+.header {
+    position: sticky;
+    z-index: 100;
+    top: 0;
+    height: 120px;
+    font-size: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    background-color: brown;
+    padding: 20px 20px 0;
+}
+
+.header-subscription {
+    padding-top: 15px;
+    padding-left: 2px;
+}
+
+
+.logo {
+    display: grid;
+    grid-template-columns: 55px 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.button-input {
+    border-radius: 11px;
+    height: 30px;
+    position: absolute;
+    top: 20px;
+    right: -2px;
+    bottom: 0;
+    border: 1px solid #f1ea7c;
+}
+
+.input {
+    display: block;
+    /* position: relative; */
+    border: 2px solid #f1ea7c;
+    color: #000000;
+    height: 30px;
+    border-radius: 11px;
+    font-family: "Comfortaa";
+    padding-left: 8px;
+    width: 390px;
+    padding-right: 32px;
+}
+
+.form {
+    padding-top: 20px;
+    /* width: 50px; */
+}
+
+.search {
+    justify-self: center;
+    position: relative;
+    width: 390px;
+}
+
+.container-basket {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    position: relative;
+    right: 147px;
+
+}
+
+.basket {
+    justify-self: center;
+    color: rgb(127, 28, 28);
+    border: 1px solid #f1ea7c;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: "Comfortaa";
+    border-radius: 20px;
+    width: 115px;
+    height: 50px;
+    background-color: #ffaa0c;
+    transition: all 0.2s;
+}
+
+.basket:hover {
+    background-color: #ffcf55;
+    width: 120px;
+    height: 55px;
+}
+
+.menu {
+    position: relative;
+    grid-column: 1 / 4;
+    /* background-color: #e55531;
+    border-radius: 15px;
+    height: 30px; */
+
+
+    /* margin-bottom: 5px; */
+    /* display: flex;
+    flex-direction: row;
+    justify-content: space-between; */
+}
+
+.menu-list {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    font-weight: 500;
+}
+
+.menu-item {
+    padding-inline: 150px;
+    border-right: 2px solid #000000;
+}
+
+.menu-item:last-child {
+    border-right: none;
+}
+
+.content {
+    background-color: #ffcf55;
+}
+
+.products-title {
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    padding-block: 40px;
+    font-weight: 600;
+    color: #d22727;
+}
+
+.products-wrapper {
+    display: flex;
+}
+
+.filter {
+    width: 300px;
+}
+
+.product-items-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 40px;
+    row-gap: 50px;
+
+}
+
+
+.product-item {
+    position: relative;
+    height: 290px;
+    width: 225px;
+    border: 2px solid #ad0000;
+    border-radius: 15px;
+    background-color: #ffffff;
+    transition: 0.1s;
+}
+
+.product-item:hover {
+    border: 2px solid #f89f06;
+}
+
+.product-img {
+    border-top-left-radius: 13px;
+    border-top-right-radius: 13px;
+}
+
+.product-calories {
+    position: absolute;
+    padding: 4px;
+    font-size: 13px;
+    border-radius: 8px;
+    background-color: #ad0000;
+    top: 5px;
+    right: 5px;
+}
+
+.product-name {
+    padding: 3px 5px;
+    font-size: 17px;
+    color: #ad0000;
+}
+
+.product-description {
+    padding: 3px 5px;
+    font-size: 12px;
+    color: #000000;
+}
+
+.product-info-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3px 7px 0 4px;
+}
+
+.product-weight {
+    font-size: 14px;
+    /* line-height: ; */
+    margin: 4px;
+    padding: 3px 1px 2px 4px;
+    background-color: #f1ea7c;
+    color: #000000;
+    width: 35px;
+}
+
+.product-price {
+    font-weight: 600;
+    font-size: 17px;
+    color: #ad0000;
+}
+
+.buy-button {
+    justify-self: center;
+    color: rgb(127, 28, 28);
+    border: 1px solid #f1ea7c;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: "Comfortaa";
+    border-radius: 20px;
+    width: 105px;
+    height: 40px;
+    background-color: #ffaa0c;
+    transition: all 0.2s;
+}
+
+.buy-button:hover {
+    background-color: #ffcf55;
+    width: 110px;
+    height: 45px;
+}

@@ -235,7 +235,7 @@ div a img {
     justify-content: right;
     align-items: center;
     position: relative;
-    right: 147px;
+    right: 139px;
 
 }
 
@@ -297,7 +297,7 @@ div a img {
     background-color: #ffcf55;
 }
 
-.products-title {
+.section-title {
     display: flex;
     justify-content: center;
     font-size: 30px;
@@ -406,4 +406,23 @@ div a img {
     background-color: #ffcf55;
     width: 110px;
     height: 45px;
+}
+
+.calculator {
+    padding: 40px 30px 20px;
+    height: 500px;
+}
+
+.about-us {
+    padding: 40px 30px 20px;
+    height: 500px;
+}
+
+.contacts {
+    padding: 60px 30px 20px;
+    height: 600px;
+}
+
+.contacts-title {
+    padding-bottom: 80px;
 }

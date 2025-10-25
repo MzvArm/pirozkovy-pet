@@ -12,6 +12,10 @@
    License: none (public domain)
 */
 
+html {
+    scroll-behavior: smooth;
+}
+
 html,
 body,
 div,
@@ -293,6 +297,11 @@ div a img {
     border-right: none;
 }
 
+.menu-link {
+    display: block;
+    padding-block: 7px;
+}
+
 .content {
     background-color: #ffcf55;
 }
@@ -304,6 +313,10 @@ div a img {
     padding-block: 40px;
     font-weight: 600;
     color: #d22727;
+}
+
+.products {
+    scroll-margin-top: 150px;
 }
 
 .products-wrapper {
@@ -411,18 +424,41 @@ div a img {
 .calculator {
     padding: 40px 30px 20px;
     height: 500px;
+    scroll-margin-top: 100px;
 }
 
 .about-us {
     padding: 40px 30px 20px;
     height: 500px;
+    scroll-margin-top: 100px;
 }
 
 .contacts {
     padding: 60px 30px 20px;
     height: 600px;
+    scroll-margin-top: 70px;
 }
 
 .contacts-title {
     padding-bottom: 80px;
+}
+
+.footer {
+    padding: 30px;
+    height: 100px;
+    background-color: brown;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.messengers {
+    display: flex;
+    column-gap: 10px;
+}
+
+.messenger {
+    padding-block: 10px 5px;
+    height: 30px;
 }

@@ -264,6 +264,47 @@ div a img {
     height: 55px;
 }
 
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 200;
+    background-color: #00000048;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    overflow-y: auto;
+    visibility: hidden;
+}
+
+.modal.open {
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal-box {
+    background-color: #f89f06;
+    position: relative;
+    max-width: 400px;
+    padding: 35px;
+    transform: scale(0);
+    transition: transform 0.8s;
+}
+
+.modal.open .modal-box {
+    transform: scale(1);
+}
+
+.close-button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: transparent;
+    padding: 5px;
+}
+
 .menu {
     position: relative;
     grid-column: 1 / 4;

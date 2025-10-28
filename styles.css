@@ -236,14 +236,15 @@ div a img {
 
 .container-basket {
     display: flex;
-    justify-content: right;
+    justify-content: center;
     align-items: center;
     position: relative;
-    right: 139px;
 
 }
 
 .basket {
+    position: relative;
+    left: 61px;
     justify-self: center;
     color: rgb(127, 28, 28);
     border: 1px solid #f1ea7c;
@@ -259,6 +260,7 @@ div a img {
 }
 
 .basket:hover {
+
     background-color: #ffcf55;
     width: 120px;
     height: 55px;
@@ -271,7 +273,7 @@ div a img {
     width: 100%;
     height: 100vh;
     z-index: 200;
-    background-color: #00000048;
+    background-color: #00000061;
     display: grid;
     align-items: center;
     justify-content: center;
@@ -281,7 +283,6 @@ div a img {
 
 .modal.open {
     visibility: visible;
-    opacity: 1;
 }
 
 .modal-box {
@@ -379,7 +380,7 @@ div a img {
 
 .product-item {
     position: relative;
-    height: 290px;
+    height: 310px;
     width: 225px;
     border: 2px solid #ad0000;
     border-radius: 15px;
@@ -442,6 +443,8 @@ div a img {
 }
 
 .buy-button {
+    position: absolute;
+    bottom: 15px;
     justify-self: center;
     color: rgb(127, 28, 28);
     border: 1px solid #f1ea7c;

@@ -380,7 +380,7 @@ div a img {
 
 .product-item {
     position: relative;
-    height: 310px;
+    height: 340px;
     width: 225px;
     border: 2px solid #ad0000;
     border-radius: 15px;
@@ -428,7 +428,6 @@ div a img {
 
 .product-weight {
     font-size: 14px;
-    /* line-height: ; */
     margin: 4px;
     padding: 3px 1px 2px 4px;
     background-color: #f1ea7c;
@@ -440,6 +439,49 @@ div a img {
     font-weight: 600;
     font-size: 17px;
     color: #ad0000;
+}
+
+.counter {
+    position: absolute;
+    bottom: 70px;
+    width: 90px;
+    height: 18px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    color: #f89f06;
+    justify-self: center;
+    align-items: end;
+    background-color: #fcab0734;
+    border: 1px solid;
+    border-radius: 5px;
+    /* padding-bottom: 2px; */
+    justify-content: space-around;
+
+}
+
+.counter-control {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+    cursor: pointer;
+}
+
+.counter-control:hover {
+    background-color: #f4890f;
+    color: #fff;
+}
+
+
+
+.counter-current {
+    display: flex;
+    width: 100%;
+    font-size: 14px;
+    justify-content: center;
+    align-items: flex-end;
+    font-weight: 700;
 }
 
 .buy-button {
@@ -467,14 +509,32 @@ div a img {
 
 .calculator {
     padding: 40px 30px 20px;
-    height: 500px;
+    height: 700px;
     scroll-margin-top: 100px;
 }
 
 .about-us {
     padding: 40px 30px 20px;
-    height: 500px;
+    height: 640px;
     scroll-margin-top: 100px;
+}
+
+.about-us-wrapper {
+display: flex;
+justify-content: space-around;
+}
+
+.about-us-text {
+    padding-top: 36px;
+    line-height: 1.15;
+    display: flex;
+    color: #ad0000;
+    max-width: 900px;
+    font-size: 20px;
+}
+
+.pekar {
+max-width: 500px;
 }
 
 .contacts {

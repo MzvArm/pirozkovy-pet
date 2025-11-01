@@ -61,8 +61,30 @@
     </div>
     <div class="modal" id="modal">
       <div class="modal-box">
-        <h2>Здесь чуть позже будет Корзина</h2>
-        <button class="close-button" id="close-modal-button" type="button"> Тут будет крестик </button>
+        <header class="header-modal-box">
+          <h2>Ваш заказ</h2>
+          <button class="close-button" id="close-modal-button" type="button"> <img src="/img/close-btn.svg"
+              class="close-button-icon" alt="Закрыть" title="Закрыть">
+          </button>
+        </header>
+        <div class="order-wrapper">
+          <div class="order-item" data-id="01">
+            <div class="order-item-img">
+              <img src="/img/pirozhok-s-kartoshkoy.png" width="40" alt="">
+            </div>
+            <div class="order-item-title">Пирожок с картошкой</div>
+            <div class="order-irem-weight">150г</div>
+            <div class="counter order-counter">
+              <div class="counter-control" data-action="minus">-</div>
+              <div class="counter-current" data-counter>1</div>
+              <div class="counter-control" data-action="plus">+</div>
+            </div>
+          </div>
+        </div>
+        <footer class="footer-modal-box">
+          <div>Сумма к оплате</div>
+          <div class="">0 Р</div>
+        </footer>
       </div>
     </div>
 
@@ -529,16 +551,17 @@
                   <p class="about-us-text">
                     Данный сайт является pet-проектом Морозова Артёма. Любой товар, характеристики, а также контактные
                     данные,
-                    представленные на сайте, являются вымышленными и не соответствуют реальности.<br /> <br />
+                    представленные на сайте, являются вымышленными и не соответствуют реальности.<br> <br>
                     А здесь я просто заполняю текст, т.к. в целом всё уже сказал. Можно было бы, конечно использовать
                     grid-сетку для этого раздела, но мне захотелось оставить flex-контейнер.
                     Какой-то смысловой нагрузки тут уже не планируется, так что я бы, на Вашем месте, пропустил эту
-                    часть. <br /> <br />
+                    часть. <br> <br>
                     Казалось бы: а почему не использовать текст-рыбу? Да, вот как-то без души это всё, а мы же тут за
-                    идею, так что нам такое не подходит. <br /> <br />
+                    идею, так что нам такое не подходит. <br> <br>
                     А вот ещё момент: женщина справа-то сгенерированная! Как и все изображения на этой странице.
-                    С идеей макета мне тож чуть ИИ из Figma помог, хоть и остальное пришлось самому додумывать. <br />
-                    <br />
+                    С идеей макета мне тож чуть помог <br> ИИ из Figma, хоть и остальное пришлось самому додумывать.
+                    <br>
+                    <br>
                     Знали бы вы сколько уже было тэгов "br" потрачено... Ну ничего, мы уже на финишной прямой. Ещё одно
                     предложение и можно заканчивать. Вот и оно, последнее предложение, спасибо, что прочитали до конца))
 

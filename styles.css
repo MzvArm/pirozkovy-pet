@@ -286,10 +286,11 @@ div a img {
 }
 
 .modal-box {
-    background-color: #f89f06;
+    background-color: #ffffff;
+    border-radius: 20px;
+    color: #000000;
     position: relative;
-    max-width: 400px;
-    padding: 35px;
+    min-width: 600px;
     transform: scale(0);
     transition: transform 0.8s;
 }
@@ -298,26 +299,67 @@ div a img {
     transform: scale(1);
 }
 
+.header-modal-box {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 20px;
+    height: 10px;
+    background-color: #f4890f;
+}
+
 .close-button {
+    cursor: pointer;
+    display: flex;
     position: absolute;
     top: 5px;
     right: 5px;
     background-color: transparent;
     padding: 5px;
+    border-radius: 50%;
+    border: none;
+    background-color: #fff;
+}
+
+.close-button-icon {
+    width: 25px;
+}
+
+.close-button:hover {
+    background-color: #a40a0a;
+}
+
+.order-wrapper {
+    background-color: #ef0d0d2a;
+    padding: 20px;
+    height: 100px;
+}
+
+.order-item {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+}
+
+.counter.order-counter {
+    position: relative;
+    bottom: 0;
+    background-color: #fff;
+
+}
+
+.footer-modal-box {
+    padding: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background-color: #f4890f;
+    display: flex;
+    justify-content: space-between;
 }
 
 .menu {
     position: relative;
     grid-column: 1 / 4;
-    /* background-color: #e55531;
-    border-radius: 15px;
-    height: 30px; */
-
-
-    /* margin-bottom: 5px; */
-    /* display: flex;
-    flex-direction: row;
-    justify-content: space-between; */
 }
 
 .menu-list {
@@ -520,8 +562,8 @@ div a img {
 }
 
 .about-us-wrapper {
-display: flex;
-justify-content: space-around;
+    display: flex;
+    justify-content: space-around;
 }
 
 .about-us-text {
@@ -534,7 +576,7 @@ justify-content: space-around;
 }
 
 .pekar {
-max-width: 500px;
+    max-width: 500px;
 }
 
 .contacts {

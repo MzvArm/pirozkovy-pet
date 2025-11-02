@@ -161,6 +161,7 @@ body {
     font-family: "Comfortaa";
     font-size: 15px;
     color: #fff;
+    г
 }
 
 div a img {
@@ -212,7 +213,6 @@ div a img {
 
 .input {
     display: block;
-    /* position: relative; */
     border: 2px solid #f1ea7c;
     color: #000000;
     height: 30px;
@@ -225,7 +225,6 @@ div a img {
 
 .form {
     padding-top: 20px;
-    /* width: 50px; */
 }
 
 .search {
@@ -329,17 +328,43 @@ div a img {
 }
 
 .order-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
     background-color: #ef0d0d2a;
     padding: 20px;
-    height: 100px;
+    min-height: 100px;
+    max-height: 200px;
+    overflow-y: scroll;
 }
 
 .order-item {
     display: flex;
     gap: 10px;
     align-items: center;
+    justify-content: space-between;
+}
+
+.order-item-title {
+    width: 360px;
+}
+
+.order-item-description {
+    display: grid;
+    grid-template-columns: 50px 360px 120px;
+    align-items: center;
+    width: 85%;
 
 }
+
+.counter-and-price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 150px;
+}
+
+
 
 .counter.order-counter {
     position: relative;
@@ -355,6 +380,23 @@ div a img {
     background-color: #f4890f;
     display: flex;
     justify-content: space-between;
+}
+
+.order-button {
+    line-height: 1.2;
+    padding: 5px;
+    font-family: "Comfortaa";
+    font-size: 13px;
+    background-color: #fff;
+    color: #a40a0a;
+    border: none;
+    border-radius: 9px;
+    cursor: pointer;
+}
+
+.order-button:hover {
+    background-color: #a40a0a;
+    color: #fff;
 }
 
 .menu {
@@ -496,12 +538,12 @@ div a img {
     background-color: #fcab0734;
     border: 1px solid;
     border-radius: 5px;
-    /* padding-bottom: 2px; */
     justify-content: space-around;
 
 }
 
 .counter-control {
+    user-select: none;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -514,8 +556,6 @@ div a img {
     background-color: #f4890f;
     color: #fff;
 }
-
-
 
 .counter-current {
     display: flex;

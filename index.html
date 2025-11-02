@@ -68,22 +68,29 @@
           </button>
         </header>
         <div class="order-wrapper">
-          <div class="order-item" data-id="01">
+          <div class="order-item">
+            <div class="order-item-description">
             <div class="order-item-img">
               <img src="/img/pirozhok-s-kartoshkoy.png" width="40" alt="">
             </div>
-            <div class="order-item-title">Пирожок с картошкой</div>
-            <div class="order-irem-weight">150г</div>
+            <div class="order-iteгm-title">Пирожок с картошкой</div>
+            <div class="order-item-info">150г / 200ккал</div>
+            </div>
+            <div class="counter-and-price">
             <div class="counter order-counter">
               <div class="counter-control" data-action="minus">-</div>
               <div class="counter-current" data-counter>1</div>
               <div class="counter-control" data-action="plus">+</div>
             </div>
+            <div class="order-irem-price">90р</div>
+            </div>
           </div>
         </div>
         <footer class="footer-modal-box">
-          <div>Сумма к оплате</div>
+          <div>Итого:</div>
           <div class="">0 Р</div>
+          <button class="order-button">Перейти к оплате <br>(не перейдёшь!)
+          </button>
         </footer>
       </div>
     </div>
@@ -110,7 +117,7 @@
                   </aside>
                   <div class="product-items-wrapper">
 
-                    <article class="product-item">
+                    <article class="product-item" data-id="01">
                       <img src="./img/pirozhok-s-kartoshkoy.png" height="150" alt="Пирожок с картошкой"
                         title="Пирожок выглядящий как булочка" loading="lazy" class="product-img">
                       <h3 class="product-name">Пирожок с картошкой</h3>
@@ -132,11 +139,11 @@
                         <div class="counter-current" data-counter>1</div>
                         <div class="counter-control" data-action="plus">+</div>
                       </div>
-                      <button class="buy-button">
+                      <button class="buy-button" data-in-basket>
                         В корзину
                       </button>
                     </article>
-                    <article class="product-item">
+                    <article class="product-item" data-id="02">
                       <img src="./img/s-kuricey-i-syrom.png" height="150" alt="Пирожок с курицей и сыром"
                         title="Пирожок выглядящий как булочка" loading="lazy" class="product-img">
                       <h3 class="product-name">Пирожок с курицей и сыром</h3>
@@ -158,11 +165,11 @@
                         <div class="counter-current" data-counter>1</div>
                         <div class="counter-control" data-action="plus">+</div>
                       </div>
-                      <button class="buy-button">
+                      <button class="buy-button" data-in-basket>
                         В корзину
                       </button>
                     </article>
-                    <article class="product-item">
+                    <article class="product-item" data-id="03">
                       <img src="./img/s-kvashenoy-kapustoy.png" height="150" width="100%"
                         alt="Пирожок с квашеной капустой" title="Пирожок выглядящий как булочка" loading="lazy"
                         class="product-img">
@@ -185,11 +192,11 @@
                         <div class="counter-current" data-counter>1</div>
                         <div class="counter-control" data-action="plus">+</div>
                       </div>
-                      <button class="buy-button">
+                      <button class="buy-button" data-in-basket>
                         В корзину
                       </button>
                     </article>
-                    <article class="product-item">
+                    <article class="product-item" data-id="04">
                       <img src="./img/s-tushenoy-kapustoy.png" height="150" width="100%"
                         alt="Пирожище с тущёной капустой" title="Пирожище" loading="lazy" class="product-img">
                       <h3 class="product-name">Пирожище с тушёной капустой</h3>
@@ -211,11 +218,11 @@
                         <div class="counter-current" data-counter>1</div>
                         <div class="counter-control" data-action="plus">+</div>
                       </div>
-                      <button class="buy-button">
+                      <button class="buy-button" data-in-basket>
                         В корзину
                       </button>
                     </article>
-                    <article class="product-item">
+                    <article class="product-item" data-id="05">
                       <img src="./img/s-yaycom-i-lukom.png" height="150" width="100%" alt="Пирожище с яйцом и луком"
                         title="Пирожище" loading="lazy" class="product-img">
                       <h3 class="product-name">Пирожище с яйцом и луком</h3>
@@ -237,11 +244,11 @@
                         <div class="counter-current" data-counter>1</div>
                         <div class="counter-control" data-action="plus">+</div>
                       </div>
-                      <button class="buy-button">
+                      <button class="buy-button" data-in-basket>
                         В корзину
                       </button>
                     </article>
-                    <article class="product-item">
+                    <article class="product-item" data-id="06">
                       <img src="./img/syr-i-zelen.jpg" height="150" width="100%" alt="Пирожок с сыром и зеленью"
                         title="Пирожок выглядящий как булочка" loading="lazy" class="product-img">
                       <h3 class="product-name">Пирожок с сыром и зеленью</h3>
@@ -263,11 +270,11 @@
                         <div class="counter-current" data-counter>1</div>
                         <div class="counter-control" data-action="plus">+</div>
                       </div>
-                      <button class="buy-button">
+                      <button class="buy-button" data-in-basket>
                         В корзину
                       </button>
                     </article>
-                    <article class="product-item">
+                    <article class="product-item" data-id="07">
                       <img src="./img/s-abrikosom.jpg" height="150" width="100%" alt="Пирожок с абрикосом"
                         title="Пирожок выглядящий как булочка" loading="lazy" class="product-img">
                       <h3 class="product-name">Пирожок с абрикосом</h3>
@@ -289,11 +296,11 @@
                         <div class="counter-current" data-counter>1</div>
                         <div class="counter-control" data-action="plus">+</div>
                       </div>
-                      <button class="buy-button">
+                      <button class="buy-button" data-in-basket>
                         В корзину
                       </button>
                     </article>
-                    <article class="product-item">
+                    <article class="product-item" data-id="08">
                       <img src="./img/s-vishney.jpg" height="150" width="100%" alt="Пирожок с вишней"
                         title="Пирожок выглядящий как булочка" loading="lazy" class="product-img">
                       <h3 class="product-name">Пирожок с вишней</h3>
@@ -315,11 +322,11 @@
                         <div class="counter-current" data-counter>1</div>
                         <div class="counter-control" data-action="plus">+</div>
                       </div>
-                      <button class="buy-button">
+                      <button class="buy-button" data-in-basket>
                         В корзину
                       </button>
                     </article>
-                    <article class="product-item">
+                    <article class="product-item" data-id="09">
                       <img src="./img/nutella.jpg" height="150" width="100%" alt="Пирожок с нутеллой"
                         title="Скорее чебурек" loading="lazy" class="product-img">
                       <h3 class="product-name">Пирожок с нутеллой</h3>
@@ -341,11 +348,11 @@
                         <div class="counter-current" data-counter>1</div>
                         <div class="counter-control" data-action="plus">+</div>
                       </div>
-                      <button class="buy-button">
+                      <button class="buy-button" data-in-basket>
                         В корзину
                       </button>
                     </article>
-                    <article class="product-item">
+                    <article class="product-item" data-id="10">
                       <img src="./img/mango-marakuya.jpg" height="150" width="100%" alt="Пирожок с манго и маракуйей"
                         title="Пирожок выглядящий как булочка" loading="lazy" class="product-img">
                       <h3 class="product-name">Пирожок с манго и маракуйей</h3>
@@ -367,11 +374,11 @@
                         <div class="counter-current" data-counter>1</div>
                         <div class="counter-control" data-action="plus">+</div>
                       </div>
-                      <button class="buy-button">
+                      <button class="buy-button" data-in-basket>
                         В корзину
                       </button>
                     </article>
-                    <article class="product-item">
+                    <article class="product-item" data-id="11">
                       <img src="./img/krem-i-korica.jpg" height="150" width="100%" alt="Булочка с кремом и корицей"
                         title="Булочка как булочка" loading="lazy" class="product-img">
                       <h3 class="product-name">Булочка с кремом и корицей</h3>
@@ -393,11 +400,11 @@
                         <div class="counter-current" data-counter>1</div>
                         <div class="counter-control" data-action="plus">+</div>
                       </div>
-                      <button class="buy-button">
+                      <button class="buy-button" data-in-basket>
                         В корзину
                       </button>
                     </article>
-                    <article class="product-item">
+                    <article class="product-item" data-id="12">
                       <img src="./img/s-tvorogom.png" height="150" width="100%" alt="Булочка с творогом"
                         title="Булочка как булочка" loading="lazy" class="product-img">
                       <h3 class="product-name">Булочка с творогом</h3>
@@ -419,11 +426,11 @@
                         <div class="counter-current" data-counter>1</div>
                         <div class="counter-control" data-action="plus">+</div>
                       </div>
-                      <button class="buy-button">
+                      <button class="buy-button" data-in-basket>
                         В корзину
                       </button>
                     </article>
-                    <article class="product-item">
+                    <article class="product-item" data-id="13">
                       <img src="./img/s-pelmenyami.png" height="150" width="100%" alt="Пирог с пельменями"
                         title="Он вам не пирожок" loading="lazy" class="product-img">
                       <h3 class="product-name">Пирог с пельменями</h3>
@@ -445,11 +452,11 @@
                         <div class="counter-current" data-counter>1</div>
                         <div class="counter-control" data-action="plus">+</div>
                       </div>
-                      <button class="buy-button">
+                      <button class="buy-button" data-in-basket>
                         В корзину
                       </button>
                     </article>
-                    <article class="product-item">
+                    <article class="product-item" data-id="14">
                       <img src="./img/kartoshka-syr.jpg" height="150" width="100%"
                         alt="Осетинский пирог с картошкой и сыром" title="Осетинский пирог" loading="lazy"
                         class="product-img">
@@ -472,11 +479,11 @@
                         <div class="counter-current" data-counter>1</div>
                         <div class="counter-control" data-action="plus">+</div>
                       </div>
-                      <button class="buy-button">
+                      <button class="buy-button" data-in-basket>
                         В корзину
                       </button>
                     </article>
-                    <article class="product-item">
+                    <article class="product-item" data-id="15">
                       <img src="./img/myaso-zelen.jpg" height="150" width="100%"
                         alt="Осетинский пирог с мясом и зеленью" title="Осетинский пирог" loading="lazy"
                         class="product-img">
@@ -499,11 +506,11 @@
                         <div class="counter-current" data-counter>1</div>
                         <div class="counter-control" data-action="plus">+</div>
                       </div>
-                      <button class="buy-button">
+                      <button class="buy-button" data-in-basket>
                         В корзину
                       </button>
                     </article>
-                    <article class="product-item">
+                    <article class="product-item" data-id="16">
                       <img src="./img/s-yablokom.jpg" height="150" width="100%" alt="Пирог с яблоками и корицей"
                         title="Пирог с яблоками и корицей" loading="lazy" class="product-img">
                       <h3 class="product-name">Пирог с яблоками и корицей</h3>
@@ -525,7 +532,7 @@
                         <div class="counter-current" data-counter>1</div>
                         <div class="counter-control" data-action="plus">+</div>
                       </div>
-                      <button class="buy-button">
+                      <button class="buy-button" data-in-basket>
                         В корзину
                       </button>
                     </article>

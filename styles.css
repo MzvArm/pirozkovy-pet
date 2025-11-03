@@ -161,7 +161,6 @@ body {
     font-family: "Comfortaa";
     font-size: 15px;
     color: #fff;
-    г
 }
 
 div a img {
@@ -338,6 +337,15 @@ div a img {
     overflow-y: scroll;
 }
 
+.basket-empty {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.none{
+    display: none;
+}
+
 .order-item {
     display: flex;
     gap: 10px;
@@ -380,6 +388,11 @@ div a img {
     background-color: #f4890f;
     display: flex;
     justify-content: space-between;
+}
+
+.total-sum-wrapper {
+    display: flex;
+    gap: 3px;
 }
 
 .order-button {

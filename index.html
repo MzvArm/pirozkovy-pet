@@ -6,7 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Пирожковый сайт</title>
   <link rel="stylesheet" href="./styles.css">
-  <script src="/script.js" defer></script>
+  <script src="/js/modall-box.js" defer></script>
+  <script src="/js/calcTotalSum.js" defer></script>
+  <script src="/js/counter.js" defer></script>
+  <script src="/js/basket.js" defer></script>
 </head>
 
 <body>
@@ -68,27 +71,14 @@
           </button>
         </header>
         <div class="order-wrapper">
-          <div class="order-item">
-            <div class="order-item-description">
-            <div class="order-item-img">
-              <img src="/img/pirozhok-s-kartoshkoy.png" width="40" alt="">
-            </div>
-            <div class="order-iteгm-title">Пирожок с картошкой</div>
-            <div class="order-item-info">150г / 200ккал</div>
-            </div>
-            <div class="counter-and-price">
-            <div class="counter order-counter">
-              <div class="counter-control" data-action="minus">-</div>
-              <div class="counter-current" data-counter>1</div>
-              <div class="counter-control" data-action="plus">+</div>
-            </div>
-            <div class="order-irem-price">90р</div>
-            </div>
-          </div>
+          <div class="basket-empty">Корзина пуста((</div>
         </div>
         <footer class="footer-modal-box">
           <div>Итого:</div>
-          <div class="">0 Р</div>
+          <div class="total-sum-wrapper">
+            <div class="total-sum">0</div>
+            <div>Р</div>
+          </div>
           <button class="order-button">Перейти к оплате <br>(не перейдёшь!)
           </button>
         </footer>

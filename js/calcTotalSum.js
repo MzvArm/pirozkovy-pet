@@ -3,25 +3,25 @@ function calcTotalSum() {
     const priceItems = orderWrapper.querySelectorAll(".order-item-price")
     const totalSum = document.querySelector(".total-sum")
 
-let total = 0
+    let total = 0
 
-// Обходим все элементы с ценами в корзине
+    // Обходим все элементы с ценами в корзине
 
-priceItems.forEach(function (item) {
+    priceItems.forEach(function (item) {
 
-    // Находим количество товара
+        // Находим количество товара
 
-    const amount = item.closest(".order-item").querySelector("[data-counter]")
+        const amount = item.closest(".order-item").querySelector("[data-counter]")
 
-    // Добавляем сумму товара в общую стоимость
+        // Добавляем сумму товара в общую стоимость
 
-    total += parseInt(item.textContent) * parseInt(amount.textContent)
+        total += parseInt(item.textContent) * parseInt(amount.textContent)
 
 
-})
+    })
 
-// Отобразим общую сумму на странице
+    // Отобразим общую сумму на странице
 
-totalSum.textContent = total
+    totalSum.textContent = total
 
 }

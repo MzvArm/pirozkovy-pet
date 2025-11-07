@@ -6,6 +6,19 @@
     font-display: swap;
 }
 
+@keyframes target-animation {
+    from {
+        scale: 100%;
+    }
+
+    50% {
+        scale: 110%;
+    }
+
+    to {
+        scale: 100%;
+    }
+}
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -232,6 +245,45 @@ div a img {
     width: 390px;
 }
 
+.products-from-search {
+    opacity: 0;
+    visibility: hidden;
+    width: 100%;
+    position: absolute;
+    max-height: 300px;
+    overflow: auto;
+    background-color: #fff;
+    border-radius: 10px;
+    z-index: 101;
+
+}
+
+.active-search {
+    opacity: 1;
+    visibility: visible;
+}
+
+.products-from-search li {
+    height: 100%;
+    display: block;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.products-from-search li a {
+    padding: 10px;
+    height: 100%;
+    display: block;
+    color: #000000;
+}
+
+.products-from-search li:hover {
+    background-color: #f4890f;
+}
+
+
+
+
 .container-basket {
     display: flex;
     justify-content: center;
@@ -334,7 +386,7 @@ div a img {
     padding: 20px;
     min-height: 100px;
     max-height: 200px;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 .basket-empty {
@@ -342,7 +394,7 @@ div a img {
     font-weight: 500;
 }
 
-.none{
+.none {
     display: none;
 }
 
@@ -505,9 +557,14 @@ div a img {
 }
 
 .product-name {
+    scroll-margin-top: 360px;
     padding: 3px 5px;
     font-size: 17px;
     color: #ad0000;
+}
+
+.product-item:has(.product-name:target) {
+    animation: target-animation 2s;
 }
 
 .product-description {

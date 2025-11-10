@@ -7,6 +7,7 @@
   <title>Пирожковый сайт</title>
   <link rel="stylesheet" href="./styles.css">
   <script src="/js/search.js" defer></script>
+  <script src="/js/filter.js" defer></script>
   <script src="/js/modall-box.js" defer></script>
   <script src="/js/calcTotalSum.js" defer></script>
   <script src="/js/counter.js" defer></script>
@@ -103,14 +104,43 @@
                 <h2 class="section-title" ">Наша выпечка</h2>
       <div class=" products-wrapper">
                   <aside class="filter">
-                    <div class="filter-cost">цена ---</div>
-                    <div class="filter-calories">каллорийность ---</div>
-                    <div class="filter-types">вид пирожка - сладкий - солёный</div>
+                    <h3 class="title">Фильтр товаров</h3>
+                    <form>
+                      <div class="filter-cost">
+                        <p class="filter-name">Цена, Р</p>
+                        <div class="filter-cost-wrapper">
+                          <label for="filter-cost-min">От</label>
+                          <input class="filter-input" type="number" data-input id="filter-cost-min" value="70" min="70" max="350">
+                          <label for="filter-cost-max">До</label>
+                          <input class="filter-input" type="number" data-input id="filter-cost-max" value="350" min="70" max="350">
+                        </div>
+                        <div class="filter-calories">
+                          <p class="filter-name">Калорийность, Ккал</p>
+                          <div class="filter-calories-wrapper">
+                            <label for="filter-calories-min">От</label>
+                            <input class="filter-input" type="number" data-input id="filter-calories-min" value="150" min="150" max="500">
+                            <label for="filter-calories-max">До</label>
+                            <input class="filter-input" type="number" data-input id="filter-calories-max" value="500" min="150" max="500">
+
+                          </div>
+
+                          <p class="filter-name">Вид пирожка</p>
+                          <div class="checkbox-wrapper">
+                            <input type="checkbox" class="savory-type" data-input id="savory" checked>
+                            <label for="savory">Солёный</label>
+                            <input type="checkbox" class="sweet-type" data-input id="sweet" checked>
+                            <label for="sweet">Сладкий</label>
+                          </div>
+
+                    </form>
+
+                    </div>
 
                   </aside>
+
                   <div class="product-items-wrapper">
 
-                    <article class="product-item" data-id="01">
+                    <article class="product-item savory" data-id="01" >
                       <img src="./img/pirozhok-s-kartoshkoy.png" height="150" alt="Пирожок с картошкой"
                         title="Пирожок выглядящий как булочка" loading="lazy" class="product-img">
                       <h3 class="product-name" id="01">Пирожок с картошкой</h3>
@@ -136,7 +166,7 @@
                         В корзину
                       </button>
                     </article>
-                    <article class="product-item" data-id="02">
+                    <article class="product-item savory" data-id="02">
                       <img src="./img/s-kuricey-i-syrom.png" height="150" alt="Пирожок с курицей и сыром"
                         title="Пирожок выглядящий как булочка" loading="lazy" class="product-img">
                       <h3 class="product-name" id="02">Пирожок с курицей и сыром</h3>
@@ -162,7 +192,7 @@
                         В корзину
                       </button>
                     </article>
-                    <article class="product-item" data-id="03">
+                    <article class="product-item savory" data-id="03">
                       <img src="./img/s-kvashenoy-kapustoy.png" height="150" width="100%"
                         alt="Пирожок с квашеной капустой" title="Пирожок выглядящий как булочка" loading="lazy"
                         class="product-img">
@@ -189,7 +219,7 @@
                         В корзину
                       </button>
                     </article>
-                    <article class="product-item" data-id="04">
+                    <article class="product-item savory" data-id="04">
                       <img src="./img/s-tushenoy-kapustoy.png" height="150" width="100%"
                         alt="Пирожище с тущёной капустой" title="Пирожище" loading="lazy" class="product-img">
                       <h3 class="product-name" id="04">Пирожище с тушёной капустой</h3>
@@ -215,7 +245,7 @@
                         В корзину
                       </button>
                     </article>
-                    <article class="product-item" data-id="05">
+                    <article class="product-item savory" data-id="05">
                       <img src="./img/s-yaycom-i-lukom.png" height="150" width="100%" alt="Пирожище с яйцом и луком"
                         title="Пирожище" loading="lazy" class="product-img">
                       <h3 class="product-name" id="05">Пирожище с яйцом и луком</h3>
@@ -241,7 +271,7 @@
                         В корзину
                       </button>
                     </article>
-                    <article class="product-item" data-id="06">
+                    <article class="product-item savory" data-id="06">
                       <img src="./img/syr-i-zelen.jpg" height="150" width="100%" alt="Пирожок с сыром и зеленью"
                         title="Пирожок выглядящий как булочка" loading="lazy" class="product-img">
                       <h3 class="product-name" id="06">Пирожок с сыром и зеленью</h3>
@@ -267,7 +297,7 @@
                         В корзину
                       </button>
                     </article>
-                    <article class="product-item" data-id="07">
+                    <article class="product-item sweet" data-id="07">
                       <img src="./img/s-abrikosom.jpg" height="150" width="100%" alt="Пирожок с абрикосом"
                         title="Пирожок выглядящий как булочка" loading="lazy" class="product-img">
                       <h3 class="product-name" id="07">Пирожок с абрикосом</h3>
@@ -293,7 +323,7 @@
                         В корзину
                       </button>
                     </article>
-                    <article class="product-item" data-id="08">
+                    <article class="product-item sweet" data-id="08">
                       <img src="./img/s-vishney.jpg" height="150" width="100%" alt="Пирожок с вишней"
                         title="Пирожок выглядящий как булочка" loading="lazy" class="product-img">
                       <h3 class="product-name" id="08">Пирожок с вишней</h3>
@@ -319,7 +349,7 @@
                         В корзину
                       </button>
                     </article>
-                    <article class="product-item" data-id="09">
+                    <article class="product-item sweet" data-id="09">
                       <img src="./img/nutella.jpg" height="150" width="100%" alt="Пирожок с нутеллой"
                         title="Скорее чебурек" loading="lazy" class="product-img">
                       <h3 class="product-name" id="09">Пирожок с нутеллой</h3>
@@ -345,7 +375,7 @@
                         В корзину
                       </button>
                     </article>
-                    <article class="product-item" data-id="10">
+                    <article class="product-item sweet" data-id="10">
                       <img src="./img/mango-marakuya.jpg" height="150" width="100%" alt="Пирожок с манго и маракуйей"
                         title="Пирожок выглядящий как булочка" loading="lazy" class="product-img">
                       <h3 class="product-name" id="10">Пирожок с манго и маракуйей</h3>
@@ -371,7 +401,7 @@
                         В корзину
                       </button>
                     </article>
-                    <article class="product-item" data-id="11">
+                    <article class="product-item sweet" data-id="11">
                       <img src="./img/krem-i-korica.jpg" height="150" width="100%" alt="Булочка с кремом и корицей"
                         title="Булочка как булочка" loading="lazy" class="product-img">
                       <h3 class="product-name" id="11">Булочка с кремом и корицей</h3>
@@ -397,7 +427,7 @@
                         В корзину
                       </button>
                     </article>
-                    <article class="product-item" data-id="12">
+                    <article class="product-item sweet" data-id="12">
                       <img src="./img/s-tvorogom.png" height="150" width="100%" alt="Булочка с творогом"
                         title="Булочка как булочка" loading="lazy" class="product-img">
                       <h3 class="product-name" id="12">Булочка с творогом</h3>
@@ -423,7 +453,7 @@
                         В корзину
                       </button>
                     </article>
-                    <article class="product-item" data-id="13">
+                    <article class="product-item savory" data-id="13">
                       <img src="./img/s-pelmenyami.png" height="150" width="100%" alt="Пирог с пельменями"
                         title="Он вам не пирожок" loading="lazy" class="product-img">
                       <h3 class="product-name" id="13">Пирог с пельменями</h3>
@@ -449,7 +479,7 @@
                         В корзину
                       </button>
                     </article>
-                    <article class="product-item" data-id="14">
+                    <article class="product-item savory" data-id="14">
                       <img src="./img/kartoshka-syr.jpg" height="150" width="100%"
                         alt="Осетинский пирог с картошкой и сыром" title="Осетинский пирог" loading="lazy"
                         class="product-img">
@@ -476,7 +506,7 @@
                         В корзину
                       </button>
                     </article>
-                    <article class="product-item" data-id="15">
+                    <article class="product-item savory" data-id="15">
                       <img src="./img/myaso-zelen.jpg" height="150" width="100%"
                         alt="Осетинский пирог с мясом и зеленью" title="Осетинский пирог" loading="lazy"
                         class="product-img">
@@ -503,7 +533,7 @@
                         В корзину
                       </button>
                     </article>
-                    <article class="product-item" data-id="16">
+                    <article class="product-item sweet" data-id="16">
                       <img src="./img/s-yablokom.jpg" height="150" width="100%" alt="Пирог с яблоками и корицей"
                         title="Пирог с яблоками и корицей" loading="lazy" class="product-img">
                       <h3 class="product-name" id="16">Пирог с яблоками и корицей</h3>

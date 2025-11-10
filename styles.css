@@ -181,6 +181,11 @@ div a img {
     align-self: center;
 }
 
+input[type="number"]:focus,
+input[type="search"]:focus {
+    outline: none;
+}
+
 .title {
     padding-top: 10px;
     font-size: 30px;
@@ -512,10 +517,38 @@ div a img {
 
 .products-wrapper {
     display: flex;
+    min-height: 40vw;
 }
 
 .filter {
-    width: 300px;
+    position: sticky;
+    top: 145px;
+    color: #a40a0a;
+    width: 290px;
+    padding-inline: 5px;
+    margin-inline: 20px;
+    border: 1px solid #a40a0a;
+    border-radius: 10px;
+    height: 300px;
+}
+
+.filter-input {
+    text-align: center;
+    border-radius: 5px;
+    border: none;
+    height: 16px;
+    padding-left: 15px;
+
+}
+
+.filter-name {
+    padding-block: 15px;
+    font-weight: 700;
+
+}
+
+.checkbox-wrapper {
+    user-select: none;
 }
 
 .product-items-wrapper {

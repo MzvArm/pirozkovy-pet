@@ -3,11 +3,10 @@
 const searchInput = document.querySelector(".input")
 const toggleSearch = document.querySelector(".products-from-search")
 const productsFromSearch = document.querySelector(".products-from-search")
-
 const productSearch = document.querySelectorAll(".product-name")
-
 const searchArray = []
 
+// Добавляем в пустой массив имя и id товаров
 
 productSearch.forEach(item => {
 
@@ -20,14 +19,20 @@ productSearch.forEach(item => {
     searchArray.push(productInfoSearch)
 })
 
-console.log(searchArray)
-
+// Отслеживаем ввод через input
 
 searchInput.addEventListener("input", () => {
+
+    // Получаем значения input
+
     const input = searchInput.value.toLowerCase();
     productsFromSearch.innerHTML = ""
 
+    // Создаём новый массив "отфильтрованных" товаров
+
     const filteredProducts = searchArray.filter(item => item.name.toLowerCase().includes(input))
+
+    // Создаём "форму" и ссылку для каждого товара
 
     filteredProducts.forEach(product => {
         const li = document.createElement("li");
@@ -35,11 +40,14 @@ searchInput.addEventListener("input", () => {
 
         link.textContent = product.name
         link.href = product.id
-        // link.target = "_blank"
+
+        // Вкладываем теги друг в друга 
 
         li.appendChild(link)
         productsFromSearch.appendChild(li)
     })
+
+    // Добавляем переключатель окна поиска
 
     if (input !== "" && filteredProducts.length > 0) {
         toggleSearch.classList.add("active-search")
@@ -48,6 +56,8 @@ searchInput.addEventListener("input", () => {
     }
 
 })
+
+// Добавляем выключение окна поиска через клик вне окна
 
 document.addEventListener("click", (event) => {
     if (!searchInput.contains(event.target) && !productsFromSearch.contains(event.target)) {

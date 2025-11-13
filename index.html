@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Пирожковый сайт</title>
   <link rel="stylesheet" href="./styles.css">
+  <script src="/js/calculator.js" defer></script>
   <script src="/js/search.js" defer></script>
   <script src="/js/filter.js" defer></script>
   <script src="/js/modall-box.js" defer></script>
@@ -110,17 +111,21 @@
                         <p class="filter-name">Цена, Р</p>
                         <div class="filter-cost-wrapper">
                           <label for="filter-cost-min">От</label>
-                          <input class="filter-input" type="number" data-input id="filter-cost-min" value="70" min="70" max="350">
+                          <input class="filter-input" type="number" data-input id="filter-cost-min" value="70" min="70"
+                            max="350">
                           <label for="filter-cost-max">До</label>
-                          <input class="filter-input" type="number" data-input id="filter-cost-max" value="350" min="70" max="350">
+                          <input class="filter-input" type="number" data-input id="filter-cost-max" value="350" min="70"
+                            max="350">
                         </div>
                         <div class="filter-calories">
                           <p class="filter-name">Калорийность, Ккал</p>
                           <div class="filter-calories-wrapper">
                             <label for="filter-calories-min">От</label>
-                            <input class="filter-input" type="number" data-input id="filter-calories-min" value="150" min="150" max="500">
+                            <input class="filter-input" type="number" data-input id="filter-calories-min" value="150"
+                              min="150" max="500">
                             <label for="filter-calories-max">До</label>
-                            <input class="filter-input" type="number" data-input id="filter-calories-max" value="500" min="150" max="500">
+                            <input class="filter-input" type="number" data-input id="filter-calories-max" value="500"
+                              min="150" max="500">
 
                           </div>
 
@@ -140,7 +145,7 @@
 
                   <div class="product-items-wrapper">
 
-                    <article class="product-item savory" data-id="01" >
+                    <article class="product-item savory" data-id="01">
                       <img src="./img/pirozhok-s-kartoshkoy.png" height="150" alt="Пирожок с картошкой"
                         title="Пирожок выглядящий как булочка" loading="lazy" class="product-img">
                       <h3 class="product-name" id="01">Пирожок с картошкой</h3>
@@ -567,8 +572,33 @@
               <section class="calculator" id="calculator">
                 <h2 class="section-title">Хлебобулочный калькулятор</h2>
                 <p class="calculator-description">
-                  Здесь можно рассчитать количество положеных хлебобулок
+                  Здесь можно рассчитать калорийность и вес выбранных хлебобулок
                 </p>
+                <div class="calculator-wrapper">
+                  <div class="calc-items">
+                  </div>
+                  <div class="calc-total">
+                    <div class="calc-total-weight-wrapper">
+                      <div class="calc-total-weight">
+                        Общий вес:
+                        <div class="total-weight-wrapper">
+                        <div class="total-weight">0</div>
+                        <div class="">г</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="calc-total-calories-wrapper">
+                      <div class="calc-total-calories">
+                        Общая калорийность:
+                        <div class="total-calories-wrapper">
+                          
+                        <div class="total-calories">0</div>
+                        <div class=""> ккал</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </section>
 
               <section class="about-us" id="about-us">

@@ -7,7 +7,7 @@ const orderWrapper = document.querySelector(".order-wrapper");
 
 window.addEventListener("click", function (event) {
 
-    // Проверяем, что клик был совершён по кнопку "В корзину"
+    // Проверяем, что клик был совершён по кнопке "В корзину"
     if (event.target.hasAttribute("data-in-basket")) {
 
         // Находим карточку с товаром, внутри которой был совершён клик
@@ -36,9 +36,15 @@ window.addEventListener("click", function (event) {
         if (itemInBasket) {
             const counterInBasket = itemInBasket.querySelector("[data-counter]");
             counterInBasket.textContent = parseInt(counterInBasket.textContent) + parseInt(productInfo.counter);
-        } else {
+       
+            // Если счётчик == 0 - не добавляем в корзину
+       
+        } else if (productInfo.counter == 0){
 
-            // Собранные данные подставляем в шаблон в корзине
+        }
+        else {
+
+            // В остальных случаях данные товара подставляем в шаблон для отображения в корзине
 
 
             const orderItemHTML = `<div class="order-item" data-id="${productInfo.id}">

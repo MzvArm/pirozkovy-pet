@@ -169,7 +169,7 @@ a {
 
 body {
     /* свойство высоты можно будет позже убрать */
-    height: 200vw;
+    /* height: 200vw; */
     box-sizing: border-box;
     font-family: "Comfortaa";
     font-size: 15px;
@@ -693,9 +693,99 @@ input[type="search"]:focus {
 }
 
 .calculator {
-    padding: 40px 30px 20px;
+    padding: 40px 30px 100px;
     height: 700px;
-    scroll-margin-top: 100px;
+    scroll-margin-top: 85px;
+}
+
+h2.section-title {
+    padding-bottom: 20px;
+}
+
+
+.calculator-description {
+    font-size: 18px;
+    padding-bottom: 20px;
+    color: #d22727;
+    justify-self: center;
+}
+
+.calculator-wrapper {
+    color: #000;
+    padding: 25px 10px;
+    justify-self: center;
+    width: 65%;
+    height: 85%;
+    background-color: #ffbebe6b;
+    border-radius: 20px;
+}
+
+.calc-items {
+    width: 93%;
+    height: 68%;
+    overflow-y: auto;
+    display: flex;
+    justify-self: center;
+    flex-direction: column;
+    gap: 7px;
+    background-color: #ef0d0d0d;
+    padding: 20px 20px 5px;
+    border-radius: 10px;
+}
+
+.calc-item {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.calc-item-description {
+    display: grid;
+    grid-template-columns: 50px 360px 120px;
+    align-items: center;
+    width: 85%;
+}
+
+.calc-total {
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 150px;
+}
+
+.calc-total-weight-wrapper,
+.calc-total-calories-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 265px;
+    padding: 30px 10px;
+    border-radius: 15px;
+    background-color: #f4890f75;
+}
+
+
+.total-weight-wrapper,
+.total-calories-wrapper {
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.total-calories {
+    padding-right: 3px;
+}
+
+.calc-counter {
+    position: relative;
+    bottom: 0;
+    background-color: #fff;
+
+}
+
+.calc-item-info {
+    display: flex;
+    gap: 5px;
 }
 
 .about-us {

@@ -698,7 +698,7 @@ input[type="search"]:focus {
     scroll-margin-top: 85px;
 }
 
-h2.section-title {
+.calculator .section-title {
     padding-bottom: 20px;
 }
 
@@ -819,7 +819,25 @@ h2.section-title {
 }
 
 .contacts-title {
-    padding-bottom: 80px;
+    padding-bottom: 60px;
+}
+
+.contacts-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contacts-text {
+    padding-top: 36px;
+    line-height: 1.25;
+    /* display: flex; */
+    color: #ad0000;
+    max-width: 800px;
+    font-size: 18px;
+}
+
+.contacts-text a {
+    color: #b07c7c;
 }
 
 .footer {

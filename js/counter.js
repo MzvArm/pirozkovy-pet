@@ -46,44 +46,54 @@ window.addEventListener("click", function (event) {
             // Запускаем функцию калькулятора
 
             calcTotal()
+
+            // Проверяем чтобы счётчик был больше 1
+
         } else if (parseInt(counter.innerText) > 1) {
-    // Проверяем чтобы счётчик был больше 1
-    {
 
-        // Уменьшаем счётчик на единицу
-        counter.innerText = --counter.innerText
+            // Уменьшаем счётчик на единицу
+            counter.innerText = --counter.innerText
 
-        // Проверяем находится ли товар (счётчик) в корзине и равен ли он "1"
+
+            // Проверяем находится ли товар (счётчик) в корзине и равен ли он "1"
+
+
+        } else if (event.target.closest(".order-wrapper") && parseInt(counter.innerText) === 1) {
+
+            // Удаляем товар из корзины
+
+            event.target.closest(".order-item").remove()
+
+            // Транслируем количество товаров в корзие в индикаторе
+
+            indicator.innerText = allOrders.length
+
+            // При отсутствии товаров в корзине скрываем индикатор
+
+            if (indicator.innerText == 0) {
+                indicator.classList.add("none")
+            }
+
+            // Проверка и переключение статуса корзины
+
+            toggleEmptyBasket()
+
+            // Пересчёт общей суммы в корзине
+
+            calcTotalSum()
+
+
+        }
+
     }
 
+    // Проверяем клик на + или - внутри корзины
 
+    if (event.target.hasAttribute("data-action") && event.target.closest(".order-wrapper")) {
 
-} else if (event.target.closest(".order-wrapper") && parseInt(counter.innerText) === 1) {
+        // Пересчёт общей суммы в корзине
 
-    // Удаляем товар из корзины
-
-    event.target.closest(".order-item").remove()
-
-    // Проверка и переключение статуса корзины
-
-    toggleEmptyBasket()
-
-    // Пересчёт общей суммы в корзине
-
-    calcTotalSum()
-
-
-}
-
+        calcTotalSum()
     }
-
-// Проверяем клик на + или - внутри корзины
-
-if (event.target.hasAttribute("data-action") && event.target.closest(".order-wrapper")) {
-
-    // Пересчёт общей суммы в корзине
-
-    calcTotalSum()
-}
 
 })

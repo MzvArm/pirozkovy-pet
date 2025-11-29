@@ -46,7 +46,6 @@
     }
 
     .basket:hover {
-
         background-color: #ffcf55;
         width: 120px;
         height: 55px;
@@ -374,6 +373,19 @@ input[type="search"]:focus {
     cursor: pointer;
 }
 
+.basket-indicator {
+    content: "";
+    position: absolute;
+    top: -3px;
+    right: -1px;
+    width: 18px;
+    aspect-ratio: 1;
+    border-radius: 36%;
+    background-color: #ff7732;
+    font-size: 12px;
+    align-content: center;
+}
+
 .modal {
     position: fixed;
     left: 0;
@@ -466,7 +478,7 @@ input[type="search"]:focus {
     display: grid;
     grid-template-columns: 50px 360px 120px;
     align-items: center;
-    width: 85%;
+    width: 80%;
 
 }
 
@@ -705,7 +717,8 @@ input[type="search"]:focus {
     width: 100%;
     font-size: 14px;
     justify-content: center;
-    align-items: flex-end;
+    align-self: center;
+    padding-top: 2px;
     font-weight: 700;
 }
 

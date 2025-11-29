@@ -2,6 +2,12 @@
 
 const orderWrapper = document.querySelector(".order-wrapper");
 
+// Собираем все элементы в корзине для "индикатора"
+
+const allOrders = document.getElementsByClassName("order-item")
+const indicator = document.querySelector(".basket-indicator")
+
+
 
 // Отслеживаем клик на странице
 
@@ -72,6 +78,12 @@ window.addEventListener("click", function (event) {
 
             orderWrapper.insertAdjacentHTML("beforeend", orderItemHTML)
         }
+
+        // Показываем индикатор при поступлении товара в корзину и сразу передаём в значение число уникальных товаров
+
+        indicator.classList.remove("none")
+
+        indicator.innerText = allOrders.length
 
         // Сбрасываем счётчик товара на "1"
 

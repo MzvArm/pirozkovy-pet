@@ -100,6 +100,16 @@
 
     }
 
+    .basket-indicator {
+        width: 17px;
+        right: -4px;
+        font-size: 11px;
+    }
+
+    .basket img {
+        width: 20px;
+    }
+
     .menu-list {
         font-size: 13px;
     }
@@ -223,6 +233,12 @@
         height: 40px;
     }
 
+    .basket-indicator {
+        width: 15px;
+        right: -4px;
+        font-size: 10px;
+    }
+
     .modal-box {
         min-width: 350px;
         font-size: 13px;
@@ -246,7 +262,12 @@
     }
 
     .order-item-description {
+        width: 85%;
         grid-template-columns: 45px 260px 105px;
+    }
+
+    .order-counter {
+        height: 25px;
     }
 
 
@@ -306,16 +327,27 @@
     }
 
     .product-item .counter {
-        bottom: 55px;
-        width: 75px;
-        height: 16px;
+        bottom: 50px;
+        /* width: 75px;
+        height: 16px; */
+        width: 100px;
+        height: 20px;
     }
 
     .buy-button {
-        bottom: 15px;
+        /* bottom: 15px;
         width: 90px;
-        height: 30px;
+        height: 30px; */
         font-size: 11px;
+
+        bottom: 10px;
+        width: 93px;
+        height: 33px;
+
+    }
+
+    .buy-button:active {
+        scale: 105%;
     }
 
     .filter {
@@ -354,6 +386,10 @@
 
     .calc-item-description {
         grid-template-columns: 45px 320px 110px;
+    }
+
+    .calc-counter {
+        height: 23px;
     }
 
     .about-us {
@@ -475,6 +511,10 @@
         width: max(80px, 12.38vw);
     }
 
+    .basket img {
+        width: 15px;
+    }
+
     .modal-box {
         min-width: 300px;
         font-size: 11px;
@@ -513,7 +553,9 @@
     }
 
     .order-counter {
-        width: 65px;
+        /* width: 65px; */
+        width: 85px;
+        height: 22px;
         font-size: 11px;
     }
 
@@ -522,8 +564,8 @@
         padding-bottom: 1px;
     }
 
-    .order-item .counter-and-price {
-        width: 100px;
+    .counter-and-price {
+        width: 125px;
     }
 
 
@@ -614,7 +656,7 @@
         padding-top: 15px;
         padding-bottom: 0;
         font-size: 10px;
-        width: 520px;
+        width: 530px;
     }
 
     .calc-item-description {
@@ -622,7 +664,11 @@
     }
 
     .calc-counter {
-        width: 75px;
+        width: 85px;
+    }
+
+    .calc-items {
+        padding: 12px 12px 5px;
     }
 
     .calc-total {
@@ -691,6 +737,15 @@
         row-gap: 15px;
     }
 
+    .order-counter {
+        width: 80px;
+        height: 20px;
+    }
+
+    .counter-and-price {
+        width: 120px;
+    }
+
     .filter {
         font-size: 11px;
         position: static;
@@ -746,7 +801,7 @@
     }
 
     .calc-item-description {
-        grid-template-columns: 200px 90px;
+        grid-template-columns: 195px 80px;
     }
 
     .calc-item-img {
@@ -758,23 +813,16 @@
         font-size: 9px;
         padding-top: 10px;
         padding-inline: 5px;
-        width: 370px;
+        width: 390px;
     }
 
     .calc-counter {
-        height: 16px;
+        height: 20px;
+        width: 100%;
     }
 
     .calc-item .counter-current {
         font-size: 12px;
-    }
-
-    .counter-and-price {
-        width: 60px;
-    }
-
-    .calc-counter {
-        width: 100%;
     }
 
     .calc-item-price {
@@ -844,6 +892,11 @@
 
 @media (max-width: 470px) {
 
+    .basket-indicator {
+        width: 14px;
+    }
+
+
     .product-items-wrapper {
         grid-template-columns: repeat(2, 40%);
     }
@@ -858,7 +911,7 @@
     }
 
     .calc-item-description {
-        grid-template-columns: 170px 75px;
+        grid-template-columns: 130px 75px;
     }
 
     .calculator-wrapper {
@@ -868,10 +921,6 @@
     .calc-items {
         padding-top: 7px;
         padding-inline: 7px;
-    }
-
-    .calc-counter {
-        width: 90%;
     }
 
     .calc-total {
